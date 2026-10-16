@@ -1,0 +1,273 @@
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .dashboard-welcome,
+  .professional-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-primary-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .availability-control {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .availability-buttons {
+    width: 100%;
+  }
+
+  .availability-button {
+    flex: 1;
+  }
+
+  .quick-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .incoming-request-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .request-card-content {
+    min-width: calc(100% - 75px);
+  }
+
+  .request-actions {
+    width: 100%;
+  }
+
+  .request-actions button {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .dashboard-shell {
+    width: calc(100% - 24px);
+    padding-top: 12px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 38px;
+  }
+
+  .dashboard-brand-subtitle {
+    display: none;
+  }
+
+  .dashboard-private-pill span:last-child,
+  .professional-status-pill {
+    display: none;
+  }
+
+  .dashboard-welcome h1,
+  .professional-welcome h1 {
+    font-size: 37px;
+    letter-spacing: -1.7px;
+  }
+
+  .dashboard-section-heading h2 {
+    font-size: 18px;
+  }
+
+  /* Active conversation */
+
+  .active-conversation-card {
+    padding: 19px;
+    border-radius: var(--jt-radius-md);
+  }
+
+  .active-card-details {
+    grid-template-columns: 1fr;
+  }
+
+  /* History */
+
+  .history-card {
+    align-items: flex-start;
+  }
+
+  .history-actions {
+    flex-direction: column;
+  }
+
+  .history-open,
+  .history-delete {
+    white-space: nowrap;
+  }
+
+  /* Professional statistics */
+
+  .professional-stats {
+    gap: 8px;
+  }
+
+  .professional-stat-card {
+    min-height: 95px;
+    padding: 13px;
+  }
+
+  .stat-number {
+    font-size: 25px;
+  }
+
+  /* Incoming request */
+
+  .incoming-request-card {
+    padding: 17px;
+  }
+
+  /* Active professional */
+
+  .professional-active-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .professional-active-content {
+    min-width: calc(100% - 62px);
+  }
+
+  .professional-active-card .active-open-button {
+    width: 100%;
+  }
+
+  /* Empty states */
+
+  .empty-conversation-card,
+  .professional-empty-card {
+    padding: 27px 18px;
+  }
+
+  /* Privacy footer */
+
+  .dashboard-privacy-footer {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .dashboard-header-actions {
+    gap: 5px;
+  }
+
+  .dashboard-logout-button {
+    padding: 7px 9px;
+  }
+
+  .dashboard-brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dashboard-brand-name {
+    font-size: 15px;
+  }
+
+  .dashboard-welcome h1,
+  .professional-welcome h1 {
+    font-size: 33px;
+  }
+
+  .professional-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .professional-stat-card.featured {
+    grid-column: 1 / -1;
+  }
+
+  .incoming-request-card {
+    border-radius: var(--jt-radius-md);
+  }
+
+  .request-card-content {
+    min-width: 0;
+  }
+
+  .request-actions {
+    gap: 6px;
+  }
+
+  .accept-button,
+  .decline-button {
+    padding: 9px 11px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 340px) {
+  .dashboard-shell {
+    width: calc(100% - 18px);
+  }
+
+  .dashboard-welcome h1,
+  .professional-welcome h1 {
+    font-size: 30px;
+    letter-spacing: -1.3px;
+  }
+
+  .professional-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-stat-card.featured {
+    grid-column: auto;
+  }
+
+  .availability-buttons {
+    flex-direction: column;
+  }
+
+  .availability-button {
+    width: 100%;
+  }
+
+  .request-actions {
+    flex-direction: column;
+  }
+
+  .request-actions button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .professional-stat-card,
+  .availability-button,
+  .accept-button,
+  .decline-button,
+  .dashboard-primary-button {
+    transition: none;
+  }
+}

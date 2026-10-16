@@ -1,0 +1,443 @@
+
+/* =========================================================
+   COMMON LIGHT PAGE BACKGROUNDS
+   ========================================================= */
+
+.categories-page,
+.compose-page,
+.identity-page,
+.conversation-page,
+.auth-page,
+.dashboard-page,
+.professional-dashboard-page,
+.professional-auth-page,
+.history-page,
+.community-page,
+.create-community-page {
+
+  color: var(--jt-text);
+
+  background:
+
+    var(--jt-bg);
+}
+
+
+/* =========================================================
+   COMMON HEADINGS
+   ========================================================= */
+
+.categories-page h1,
+.categories-page h2,
+.categories-page h3,
+
+.compose-page h1,
+.compose-page h2,
+.compose-page h3,
+
+.identity-page h1,
+.identity-page h2,
+.identity-page h3,
+
+.conversation-page h1,
+.conversation-page h2,
+.conversation-page h3,
+
+.auth-page h1,
+.auth-page h2,
+.auth-page h3,
+
+.dashboard-page h1,
+.dashboard-page h2,
+.dashboard-page h3,
+
+.professional-dashboard-page h1,
+.professional-dashboard-page h2,
+.professional-dashboard-page h3,
+
+.professional-auth-page h1,
+.professional-auth-page h2,
+.professional-auth-page h3,
+
+.history-page h1,
+.history-page h2,
+.history-page h3,
+
+.community-page h1,
+.community-page h2,
+.community-page h3,
+
+.create-community-page h1,
+.create-community-page h2,
+.create-community-page h3 {
+
+  color: var(--jt-navy);
+}
+
+
+/* =========================================================
+   COMMON WHITE CARDS
+   ========================================================= */
+
+.categories-page .card,
+.compose-page .card,
+.identity-page .card,
+.conversation-page .card,
+.auth-page .card,
+.dashboard-page .card,
+.professional-dashboard-page .card,
+.professional-auth-page .card,
+.history-page .card {
+
+  background: var(--jt-surface);
+
+  border-color: var(--jt-border);
+
+  box-shadow: var(--jt-shadow);
+}
+
+
+/* =========================================================
+   COMMON BUTTONS
+   ========================================================= */
+
+.categories-page button.primary,
+.compose-page button.primary,
+.identity-page button.primary,
+.conversation-page button.primary,
+.auth-page button.primary,
+.dashboard-page button.primary,
+.professional-dashboard-page button.primary,
+.professional-auth-page button.primary,
+.history-page button.primary {
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  border-color: transparent;
+
+  box-shadow:
+    0 10px 25px rgba(230, 0, 18, 0.18);
+
+  transition:
+    transform var(--jt-transition),
+    box-shadow var(--jt-transition),
+    opacity var(--jt-transition);
+}
+
+
+.categories-page button.primary:hover,
+.compose-page button.primary:hover,
+.identity-page button.primary:hover,
+.conversation-page button.primary:hover,
+.auth-page button.primary:hover,
+.dashboard-page button.primary:hover,
+.professional-dashboard-page button.primary:hover,
+.professional-auth-page button.primary:hover,
+.history-page button.primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 32px rgba(230, 0, 18, 0.25);
+}
+
+
+.categories-page button.primary:active,
+.compose-page button.primary:active,
+.identity-page button.primary:active,
+.conversation-page button.primary:active,
+.auth-page button.primary:active,
+.dashboard-page button.primary:active,
+.professional-dashboard-page button.primary:active,
+.professional-auth-page button.primary:active,
+.history-page button.primary:active {
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   COMMON FORM CONTROLS
+   ========================================================= */
+
+.categories-page input,
+.categories-page textarea,
+.categories-page select,
+
+.compose-page input,
+.compose-page textarea,
+.compose-page select,
+
+.identity-page input,
+.identity-page textarea,
+.identity-page select,
+
+.conversation-page input,
+.conversation-page textarea,
+.conversation-page select,
+
+.auth-page input,
+.auth-page textarea,
+.auth-page select,
+
+.dashboard-page input,
+.dashboard-page textarea,
+.dashboard-page select,
+
+.professional-dashboard-page input,
+.professional-dashboard-page textarea,
+.professional-dashboard-page select,
+
+.professional-auth-page input,
+.professional-auth-page textarea,
+.professional-auth-page select,
+
+.history-page input,
+.history-page textarea,
+.history-page select {
+
+  background: var(--jt-surface);
+
+  color: var(--jt-text);
+
+  border-color: var(--jt-border);
+}
+
+
+.categories-page input:focus,
+.categories-page textarea:focus,
+.categories-page select:focus,
+
+.compose-page input:focus,
+.compose-page textarea:focus,
+.compose-page select:focus,
+
+.identity-page input:focus,
+.identity-page textarea:focus,
+.identity-page select:focus,
+
+.conversation-page input:focus,
+.conversation-page textarea:focus,
+.conversation-page select:focus,
+
+.auth-page input:focus,
+.auth-page textarea:focus,
+.auth-page select:focus,
+
+.dashboard-page input:focus,
+.dashboard-page textarea:focus,
+.dashboard-page select:focus,
+
+.professional-dashboard-page input:focus,
+.professional-dashboard-page textarea:focus,
+.professional-dashboard-page select:focus,
+
+.professional-auth-page input:focus,
+.professional-auth-page textarea:focus,
+.professional-auth-page select:focus,
+
+.history-page input:focus,
+.history-page textarea:focus,
+.history-page select:focus {
+
+  border-color: rgba(230, 0, 18, 0.55);
+
+  box-shadow:
+    0 0 0 4px rgba(230, 0, 18, 0.08);
+
+  outline: none;
+}
+
+
+/* =========================================================
+   COMMON LINKS
+   ========================================================= */
+
+.categories-page a:hover,
+.compose-page a:hover,
+.identity-page a:hover,
+.conversation-page a:hover,
+.auth-page a:hover,
+.dashboard-page a:hover,
+.professional-dashboard-page a:hover,
+.professional-auth-page a:hover,
+.history-page a:hover,
+.community-page a:hover,
+.create-community-page a:hover {
+
+  color: var(--jt-primary);
+}
+
+
+/* =========================================================
+   COMMON ACTIVE STATE
+   ========================================================= */
+
+.categories-page .active,
+.compose-page .active,
+.identity-page .active,
+.conversation-page .active,
+.auth-page .active,
+.dashboard-page .active,
+.professional-dashboard-page .active,
+.professional-auth-page .active,
+.history-page .active,
+.community-page .active,
+.create-community-page .active {
+
+  color: var(--jt-primary);
+}
+
+
+/* =========================================================
+   DARK JT COMPONENT
+   ========================================================= */
+
+.jt-theme-dark {
+
+  background: var(--jt-dark);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK JT COMPONENT — TEXT
+   ========================================================= */
+
+.jt-theme-dark h1,
+.jt-theme-dark h2,
+.jt-theme-dark h3,
+.jt-theme-dark h4 {
+
+  color: #ffffff;
+}
+
+
+.jt-theme-dark p {
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   CORAL GLOW
+   ========================================================= */
+
+.jt-coral-glow {
+
+  box-shadow:
+
+    0 0 0 1px rgba(230, 0, 18, 0.06),
+
+    0 20px 60px rgba(230, 0, 18, 0.08);
+}
+
+
+/* =========================================================
+   CORAL ACCENT
+   ========================================================= */
+
+.jt-coral {
+
+  color: var(--jt-primary);
+}
+
+
+.jt-coral-bg {
+
+  background: var(--jt-primary-soft);
+
+  border-color: rgba(230, 0, 18, 0.16);
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.jt-success {
+
+  color: var(--jt-success);
+}
+
+
+.jt-success-bg {
+
+  background: var(--jt-success-soft);
+
+  border-color: rgba(76, 175, 136, 0.18);
+}
+
+
+/* =========================================================
+   WARNING
+   ========================================================= */
+
+.jt-warning {
+
+  color: var(--jt-warning);
+}
+
+
+.jt-warning-bg {
+
+  background: var(--jt-warning-soft);
+
+  border-color: rgba(229, 168, 75, 0.18);
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.jt-danger {
+
+  color: var(--jt-danger);
+}
+
+
+.jt-danger-bg {
+
+  background: var(--jt-danger-soft);
+
+  border-color: rgba(217, 83, 91, 0.18);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.categories-page button:focus-visible,
+.compose-page button:focus-visible,
+.identity-page button:focus-visible,
+.conversation-page button:focus-visible,
+.auth-page button:focus-visible,
+.dashboard-page button:focus-visible,
+.professional-dashboard-page button:focus-visible,
+.professional-auth-page button:focus-visible,
+.history-page button:focus-visible,
+.community-page button:focus-visible,
+.create-community-page button:focus-visible {
+
+  outline: 3px solid rgba(230, 0, 18, 0.25);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .jt-theme-dark {
+
+    border-radius: 0;
+  }
+}

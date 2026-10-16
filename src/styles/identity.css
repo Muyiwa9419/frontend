@@ -1,0 +1,651 @@
+
+/* =========================================================
+   JUST TALK — IDENTITY PAGE
+   Uses the global.css color system
+   ========================================================= */
+
+.identity-page {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    var(--jt-bg);
+
+  color: var(--jt-text);
+}
+
+.identity-page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: transparent;
+
+  z-index: 0;
+}
+
+.identity-page .flow-header,
+.identity-page .flow-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   IDENTITY CONTENT
+   ========================================================= */
+
+.identity-container {
+  width: 100%;
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  padding-top: 32px;
+  padding-bottom: 70px;
+
+  box-sizing: border-box;
+}
+
+.identity-intro {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.identity-intro .step-progress {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.identity-intro h1 {
+  margin: 14px 0 12px;
+
+  color: var(--jt-dark);
+
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.03;
+
+  letter-spacing: -2.5px;
+
+  font-weight: 700;
+}
+
+.identity-lock {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px auto 0;
+
+  border: 1px solid rgba(230, 0, 18, 0.12);
+
+  border-radius: var(--jt-radius-md);
+
+  background: rgba(230, 0, 18, 0.10);
+
+  color: var(--jt-primary);
+
+  font-size: 23px;
+
+  box-shadow:
+    0 10px 28px rgba(15, 31, 77, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   ANONYMOUS CARD
+   ========================================================= */
+
+.anonymous-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--jt-border);
+  border-radius: var(--jt-radius-md);
+
+  background: var(--jt-surface);
+
+  box-shadow: var(--jt-shadow);
+
+  box-sizing: border-box;
+
+  transition:
+    transform var(--jt-transition),
+    box-shadow var(--jt-transition),
+    border-color var(--jt-transition);
+}
+
+.anonymous-card:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(230, 0, 18, 0.22);
+
+  box-shadow:
+    0 14px 40px rgba(15, 31, 77, 0.075);
+}
+
+.anonymous-icon {
+  width: 47px;
+  height: 47px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--jt-radius-sm);
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 9px 20px rgba(230, 0, 18, 0.18);
+}
+
+.anonymous-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.anonymous-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 5px;
+}
+
+.anonymous-heading strong {
+  color: var(--jt-text);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.verified-private {
+  padding: 4px 7px;
+
+  border: 1px solid rgba(76, 175, 136, 0.12);
+
+  border-radius: 999px;
+
+  background: var(--jt-success-soft);
+
+  color: var(--jt-success);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+}
+
+.anonymous-content p {
+  margin: 0;
+
+  color: var(--jt-text-secondary);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MESSAGE PREVIEW
+   ========================================================= */
+
+.message-preview-card {
+  padding: 18px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid var(--jt-border);
+  border-radius: var(--jt-radius-md);
+
+  background: var(--jt-surface);
+
+  box-shadow: var(--jt-shadow);
+
+  box-sizing: border-box;
+}
+
+.message-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.message-preview-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.preview-label {
+  color: var(--jt-text-muted);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.preview-subtitle {
+  color: var(--jt-text-faint);
+
+  font-size: 10px;
+}
+
+.preview-check {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--jt-radius-xs);
+
+  background: var(--jt-success-soft);
+
+  color: var(--jt-success);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.message-preview {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 14px;
+
+  border: 1px solid var(--jt-border-soft);
+  border-radius: var(--jt-radius-sm);
+
+  background: var(--jt-surface-soft);
+
+  box-sizing: border-box;
+}
+
+.preview-avatar {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--jt-radius-xs);
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 13px rgba(230, 0, 18, 0.15);
+}
+
+.message-preview p {
+  margin: 0;
+
+  color: var(--jt-text-secondary);
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   PRIVACY PROMISE
+   ========================================================= */
+
+.identity-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 14px 15px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(230, 0, 18, 0.10);
+
+  border-radius: var(--jt-radius-sm);
+
+  background: rgba(230, 0, 18, 0.045);
+
+  box-sizing: border-box;
+}
+
+.identity-privacy-icon {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--jt-radius-xs);
+
+  background: var(--jt-primary-soft);
+
+  color: var(--jt-primary);
+
+  font-size: 13px;
+}
+
+.identity-privacy strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: var(--jt-text);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.identity-privacy p {
+  margin: 0;
+
+  color: var(--jt-text-secondary);
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CONTINUE BUTTON
+   ========================================================= */
+
+.identity-continue {
+  width: 100%;
+  min-height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: none;
+  border-radius: var(--jt-radius-sm);
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 25px rgba(230, 0, 18, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    transform var(--jt-transition),
+    box-shadow var(--jt-transition),
+    opacity var(--jt-transition);
+}
+
+.identity-continue:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 32px rgba(230, 0, 18, 0.25);
+}
+
+.identity-continue:active {
+  transform: translateY(0);
+}
+
+.identity-continue:focus-visible {
+  outline: 3px solid rgba(230, 0, 18, 0.18);
+  outline-offset: 3px;
+}
+
+.identity-continue .button-arrow {
+  font-size: 18px;
+
+  transition:
+    transform var(--jt-transition);
+}
+
+.identity-continue:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+.identity-footer {
+  margin: 13px 0 0;
+
+  text-align: center;
+
+  color: var(--jt-text-faint);
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .identity-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .identity-intro h1 {
+    font-size: clamp(38px, 8vw, 50px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .identity-container {
+    padding-top: 25px;
+    padding-bottom: 45px;
+  }
+
+  .identity-intro {
+    margin-bottom: 25px;
+  }
+
+  .identity-intro h1 {
+    font-size: 39px;
+    letter-spacing: -1.8px;
+  }
+
+  .identity-lock {
+    width: 50px;
+    height: 50px;
+
+    margin-top: 17px;
+
+    border-radius: var(--jt-radius-sm);
+  }
+
+  .anonymous-card {
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: var(--jt-radius-sm);
+  }
+
+  .anonymous-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: var(--jt-radius-xs);
+
+    font-size: 18px;
+  }
+
+  .anonymous-heading {
+    flex-wrap: wrap;
+  }
+
+  .anonymous-heading strong {
+    font-size: 13px;
+  }
+
+  .message-preview-card {
+    padding: 15px;
+
+    border-radius: var(--jt-radius-sm);
+  }
+
+  .message-preview {
+    padding: 12px;
+  }
+
+  .identity-privacy {
+    padding: 12px;
+  }
+
+  .identity-continue {
+    min-height: 54px;
+
+    border-radius: var(--jt-radius-sm);
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .identity-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .identity-intro h1 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+
+  .identity-lock {
+    width: 48px;
+    height: 48px;
+  }
+
+  .anonymous-content p {
+    font-size: 10px;
+  }
+
+  .message-preview p {
+    font-size: 11px;
+  }
+
+  .identity-privacy p {
+    font-size: 9.5px;
+  }
+
+  .identity-footer {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .identity-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .identity-intro h1 {
+    font-size: 32px;
+  }
+
+  .anonymous-card {
+    padding: 13px;
+  }
+
+  .anonymous-icon {
+    width: 39px;
+    height: 39px;
+
+    border-radius: var(--jt-radius-xs);
+  }
+
+  .anonymous-heading {
+    gap: 5px;
+  }
+
+  .verified-private {
+    font-size: 7px;
+  }
+
+  .message-preview-card {
+    padding: 13px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .anonymous-card,
+  .identity-continue,
+  .identity-continue .button-arrow {
+    transition: none;
+  }
+
+  .anonymous-card:hover,
+  .identity-continue:hover {
+    transform: none;
+  }
+}

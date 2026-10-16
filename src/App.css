@@ -1,0 +1,26 @@
+@import "./styles/global.css";
+
+/* HOME — DO NOT CHANGE */
+@import "./styles/home.css";
+
+/* OTHER PAGES */
+@import "./styles/categories.css";
+@import "./styles/flow-pages.css";
+@import "./styles/authentication.css";
+@import "./styles/dashboard.css";
+@import "./styles/compose.css";
+@import "./styles/conversation.css";
+@import "./styles/identity.css";
+@import "./styles/history.css";
+@import "./styles/professional-dashboard.css";
+@import "./styles/loading.css";
+@import "./styles/responsive.css";
+
+/* COMMUNITY */
+@import "./styles/community.css";
+
+/* SHARED THEME */
+@import "./styles/theme.css";
+
+/* CREATE COMMUNITY POST */
+@import "./styles/CreateCommunityPost.css";

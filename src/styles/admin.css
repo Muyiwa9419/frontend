@@ -1,0 +1,1776 @@
+/* =========================================================
+   JUST TALK — ADMIN STYLES
+   ========================================================= */
+
+.jt-admin-page,
+.jt-auth-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ADMIN AUTH
+   ========================================================= */
+
+.jt-auth-page {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 20px;
+
+  background:
+    #060d24;
+}
+
+.jt-auth-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.jt-auth-glow-one {
+  width: 280px;
+  height: 280px;
+  top: -100px;
+  left: -80px;
+  background: #695cff;
+}
+
+.jt-auth-glow-two {
+  width: 300px;
+  height: 300px;
+  right: -120px;
+  bottom: -100px;
+  background: #ff3344;
+}
+
+.jt-auth-card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 470px;
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  box-shadow:
+    0 30px 100px
+      rgba(0, 0, 0, 0.45),
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.jt-back-button {
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+  margin-bottom: 30px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jt-back-button:hover {
+  color: white;
+  transform: translateX(-3px);
+}
+
+.jt-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 38px;
+}
+
+.jt-auth-logo {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  color: white;
+
+  background: #ff3344;
+
+  box-shadow:
+    0 10px 30px
+      rgba(79, 120, 232, 0.3);
+}
+
+.jt-auth-brand-name {
+  color: white;
+
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.jt-auth-brand-subtitle {
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 12px;
+}
+
+.jt-auth-heading {
+  margin-bottom: 28px;
+}
+
+.jt-auth-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #8fb0ff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.jt-auth-heading h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(32px, 5vw, 43px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.jt-auth-heading p {
+  margin: 16px 0 0;
+
+  color: rgba(255, 255, 255, 0.56);
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.jt-auth-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 13px 14px;
+  margin-bottom: 20px;
+
+  border: 1px solid
+    rgba(255, 51, 68, 0.25);
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 51, 68, 0.08);
+
+  color: #ff8a92;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.jt-auth-error span {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 51, 68, 0.2);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.jt-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.jt-auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.jt-auth-form label > span {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.jt-auth-form input {
+  width: 100%;
+  height: 53px;
+
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 14px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color: white;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jt-auth-form input::placeholder {
+  color: rgba(255, 255, 255, 0.27);
+}
+
+.jt-auth-form input:focus {
+  border-color:
+    rgba(79, 120, 232, 0.7);
+
+  background:
+    rgba(255, 255, 255, 0.065);
+
+  box-shadow:
+    0 0 0 4px
+      rgba(79, 120, 232, 0.09);
+}
+
+.jt-auth-form input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.jt-primary-button {
+  width: 100%;
+  min-height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  background: #a354ff;
+
+  box-shadow:
+    0 14px 35px
+      rgba(79, 120, 232, 0.24);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.jt-primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 18px 42px
+      rgba(79, 120, 232, 0.34);
+}
+
+.jt-primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.jt-primary-button > span {
+  font-size: 18px;
+}
+
+.jt-button-spinner {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation:
+    jt-admin-spin 0.7s linear infinite;
+}
+
+.jt-auth-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.jt-security-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #8fb0ff;
+
+  background:
+    rgba(79, 120, 232, 0.12);
+
+  font-size: 14px;
+}
+
+.jt-auth-security strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 12px;
+}
+
+.jt-auth-security p {
+  margin: 4px 0 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADMIN DASHBOARD
+   ========================================================= */
+
+.jt-admin-page {
+  display: flex;
+
+  background:
+    #060d24;
+
+  color: white;
+}
+
+.jt-admin-sidebar {
+  width: 250px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px;
+
+  border-right: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.jt-admin-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 5px 8px 34px;
+}
+
+.jt-admin-sidebar-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #ff3344;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.jt-admin-sidebar-brand strong {
+  display: block;
+  font-size: 14px;
+}
+
+.jt-admin-sidebar-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+}
+
+.jt-admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.jt-admin-nav button {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 13px;
+
+  border: 1px solid transparent;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.jt-admin-nav button:hover {
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+}
+
+.jt-admin-nav button.active {
+  color: white;
+
+  border-color:
+    rgba(79, 120, 232, 0.16);
+
+  background: rgba(79, 120, 232, 0.15);
+}
+
+.jt-admin-nav button > span {
+  width: 18px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  text-align: center;
+}
+
+.jt-admin-nav button.active > span {
+  color: #8fb0ff;
+}
+
+.jt-admin-nav button b {
+  margin-left: auto;
+
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  color: white;
+
+  background:
+    rgba(255, 51, 68, 0.18);
+
+  font-size: 10px;
+}
+
+.jt-admin-sidebar-bottom {
+  margin-top: auto;
+}
+
+.jt-admin-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px;
+
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+}
+
+.jt-admin-status > span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #43e0b1;
+
+  box-shadow:
+    0 0 10px
+      rgba(67, 224, 177, 0.7);
+}
+
+.jt-admin-logout {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.jt-admin-logout:hover {
+  color: white;
+
+  border-color:
+    rgba(255, 51, 68, 0.25);
+
+  background:
+    rgba(255, 51, 68, 0.07);
+}
+
+.jt-admin-content {
+  min-width: 0;
+  flex: 1;
+
+  padding: 42px;
+
+  overflow: auto;
+}
+
+.jt-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 34px;
+}
+
+.jt-admin-eyebrow,
+.jt-admin-section-intro > div > span {
+  color: #8fb0ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.jt-admin-header h1 {
+  margin: 8px 0 7px;
+
+  font-size: clamp(
+    32px,
+    4vw,
+    46px
+  );
+
+  letter-spacing: -0.045em;
+}
+
+.jt-admin-header p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 13px;
+}
+
+.jt-admin-refresh {
+  padding: 11px 15px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.jt-admin-refresh:hover {
+  color: white;
+
+  border-color:
+    rgba(79, 120, 232, 0.35);
+}
+
+.jt-admin-alert {
+  padding: 13px 16px;
+
+  margin-bottom: 18px;
+
+  border-radius: 13px;
+
+  font-size: 12px;
+}
+
+.jt-admin-alert.error {
+  border: 1px solid
+    rgba(255, 51, 68, 0.2);
+
+  background:
+    rgba(255, 51, 68, 0.07);
+
+  color: #ff8a92;
+}
+
+.jt-admin-alert.success {
+  border: 1px solid
+    rgba(67, 224, 177, 0.2);
+
+  background:
+    rgba(67, 224, 177, 0.07);
+
+  color: #82eecb;
+}
+
+.jt-admin-stat-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+.jt-admin-stat-card {
+  padding: 20px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.04);
+}
+
+.jt-admin-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.jt-admin-stat-top > span {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 11px;
+}
+
+.jt-admin-stat-top > div {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #8fb0ff;
+
+  background:
+    rgba(79, 120, 232, 0.1);
+}
+
+.jt-admin-stat-card > strong {
+  display: block;
+
+  font-size: 30px;
+
+  letter-spacing: -0.04em;
+}
+
+.jt-admin-stat-card > small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 10px;
+}
+
+.jt-admin-panel-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.jt-admin-panel {
+  padding: 24px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.03);
+}
+
+.jt-admin-panel-heading span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.jt-admin-panel-heading h2 {
+  margin: 7px 0 0;
+
+  font-size: 18px;
+
+  letter-spacing: -0.025em;
+}
+
+.jt-admin-status-list {
+  margin-top: 22px;
+}
+
+.jt-admin-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+.jt-admin-status-row:last-child {
+  border-bottom: none;
+}
+
+.jt-admin-status-row > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+}
+
+.jt-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.jt-status-dot.warning {
+  background: #f2bd67;
+}
+
+.jt-status-dot.success {
+  background: #43e0b1;
+}
+
+.jt-status-dot.info {
+  background: #8c7fff;
+}
+
+.jt-status-dot.neutral {
+  background:
+    rgba(255, 255, 255, 0.3);
+}
+
+.jt-admin-status-row strong {
+  font-size: 13px;
+}
+
+.jt-admin-section-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.jt-admin-section-intro h2 {
+  margin: 7px 0;
+
+  font-size: 22px;
+
+  letter-spacing: -0.03em;
+}
+
+.jt-admin-section-intro p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 12px;
+}
+
+.jt-admin-count {
+  min-width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  color: #8fb0ff;
+
+  background:
+    rgba(79, 120, 232, 0.08);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.jt-admin-table-wrap {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.jt-admin-table {
+  width: 100%;
+
+  min-width: 800px;
+
+  border-collapse: collapse;
+}
+
+.jt-admin-table th {
+  padding: 14px 18px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-align: left;
+}
+
+.jt-admin-table td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 11px;
+}
+
+.jt-admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.jt-admin-person {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.jt-admin-avatar {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(79, 120, 232, 0.25);
+
+  color: #a9c2ff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.jt-admin-person strong,
+.jt-admin-user-account strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 12px;
+}
+
+.jt-admin-person span,
+.jt-admin-user-account span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+}
+
+.jt-admin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.jt-admin-tags span {
+  padding: 5px 7px;
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+}
+
+.jt-admin-badge {
+  display: inline-flex;
+
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+.jt-admin-badge.pending {
+  color: #f4ca82;
+
+  background:
+    rgba(244, 202, 130, 0.1);
+}
+
+.jt-admin-badge.approved,
+.jt-admin-badge.active {
+  color: #70e5bf;
+
+  background:
+    rgba(67, 224, 177, 0.09);
+}
+
+.jt-admin-badge.rejected,
+.jt-admin-badge.suspended {
+  color: #ff8a92;
+
+  background:
+    rgba(255, 51, 68, 0.09);
+}
+
+.jt-admin-badge.deactivated,
+.jt-admin-badge.pending-deletion {
+  color: #aaa;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+
+.jt-admin-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.jt-admin-actions button,
+.jt-admin-table td > button {
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.jt-admin-actions button:disabled,
+.jt-admin-table td > button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.jt-admin-actions .approve,
+.jt-admin-table .reactivate {
+  border: 1px solid
+    rgba(67, 224, 177, 0.18);
+
+  background:
+    rgba(67, 224, 177, 0.08);
+
+  color: #70e5bf;
+}
+
+.jt-admin-actions .reject,
+.jt-admin-table .suspend {
+  border: 1px solid
+    rgba(255, 51, 68, 0.16);
+
+  background:
+    rgba(255, 51, 68, 0.07);
+
+  color: #ff8a92;
+}
+
+.jt-admin-no-action {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+}
+
+.jt-admin-role {
+  padding: 5px 7px;
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+}
+
+.jt-admin-empty {
+  padding: 45px 20px !important;
+
+  color: rgba(255, 255, 255, 0.25) !important;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ADMIN LOADING
+   ========================================================= */
+
+.jt-admin-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  background: #060d24;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.jt-admin-loading-logo {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: #ff3344;
+
+  color: white;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  box-shadow:
+    0 15px 50px
+      rgba(79, 120, 232, 0.3);
+}
+
+.jt-admin-loading-spinner {
+  width: 22px;
+  height: 22px;
+
+  border: 2px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-top-color: #8fb0ff;
+
+  border-radius: 50%;
+
+  animation:
+    jt-admin-spin 0.8s linear infinite;
+}
+
+.jt-admin-loading p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+@keyframes jt-admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .jt-admin-sidebar {
+    width: 210px;
+  }
+
+  .jt-admin-content {
+    padding: 30px 24px;
+  }
+
+  .jt-admin-stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .jt-admin-page {
+    display: block;
+  }
+
+  .jt-admin-sidebar {
+    width: auto;
+
+    padding: 16px;
+
+    border-right: none;
+
+    border-bottom: 1px solid
+      rgba(255, 255, 255, 0.07);
+  }
+
+  .jt-admin-sidebar-brand {
+    padding-bottom: 16px;
+  }
+
+  .jt-admin-nav {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .jt-admin-nav button {
+    justify-content: center;
+  }
+
+  .jt-admin-nav button b {
+    display: none;
+  }
+
+  .jt-admin-sidebar-bottom {
+    display: none;
+  }
+
+  .jt-admin-content {
+    padding: 25px 16px;
+  }
+
+  .jt-admin-header {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    margin-bottom: 25px;
+  }
+
+  .jt-admin-refresh {
+    align-self: flex-start;
+  }
+
+  .jt-admin-panel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .jt-auth-page {
+    padding: 18px 14px;
+  }
+
+  .jt-auth-card {
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .jt-auth-heading h1 {
+    font-size: 34px;
+  }
+
+  .jt-admin-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .jt-admin-stat-card {
+    padding: 15px;
+  }
+
+  .jt-admin-stat-card > strong {
+    font-size: 24px;
+  }
+
+  .jt-admin-nav button {
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+
+  .jt-admin-nav button > span {
+    display: none;
+  }
+
+  .jt-admin-section-intro {
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   COMMUNITY REPORTS
+========================================================= */
+
+.jt-admin-nav-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  margin-left: auto;
+  padding: 0 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.jt-admin-nav-count-alert {
+  background: rgba(255, 51, 68, 0.16);
+  color: #ff5560;
+  border: 1px solid rgba(255, 51, 68, 0.25);
+}
+
+.jt-admin-report-header {
+  align-items: flex-start;
+}
+
+.jt-admin-report-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jt-admin-report-filters button {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.62);
+  padding: 9px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.jt-admin-report-filters button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.jt-admin-report-filters button.active {
+  background: rgba(79, 120, 232, 0.16);
+  border-color: rgba(79, 120, 232, 0.35);
+  color: #fff;
+}
+
+.jt-admin-report-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.jt-admin-report-card {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.jt-admin-report-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.jt-admin-report-top > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.jt-admin-report-reason {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ff6a75;
+}
+
+.jt-admin-report-date {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+}
+
+.jt-admin-report-content {
+  margin-top: 18px;
+}
+
+.jt-admin-report-target {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jt-admin-report-content h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.jt-admin-report-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.67);
+  line-height: 1.7;
+}
+
+.jt-admin-report-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+}
+
+.jt-admin-report-meta strong {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.jt-admin-report-details {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.jt-admin-report-details > span {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.jt-admin-report-details p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.6;
+}
+
+.jt-admin-report-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.jt-admin-report-footer > span {
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 11px;
+  font-family: monospace;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.jt-admin-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(82, 220, 160, 0.1);
+  color: #63e6b2;
+  font-size: 20px;
+}
+
+.jt-admin-empty h3 {
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.jt-admin-empty p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   REPORT REVIEW MODAL
+========================================================= */
+
+.jt-admin-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 13, 36, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.jt-admin-modal {
+  position: relative;
+  width: min(680px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    #11101d;
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(79, 120, 232, 0.08);
+}
+
+.jt-admin-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.jt-admin-modal-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.jt-admin-modal h2 {
+  margin: 7px 50px 24px 0;
+  color: #fff;
+  font-size: 28px;
+}
+
+.jt-admin-review-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.jt-admin-review-status span {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+}
+
+.jt-admin-review-status strong {
+  color: #ff6a75;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.jt-admin-review-section {
+  margin-top: 20px;
+}
+
+.jt-admin-review-section > span {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jt-admin-review-section h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.jt-admin-review-author {
+  color: rgba(255, 255, 255, 0.43);
+  font-size: 12px;
+}
+
+.jt-admin-review-author strong {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.jt-admin-review-category {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(79, 120, 232, 0.1);
+  color: #a9c2ff;
+  font-size: 11px;
+}
+
+.jt-admin-review-body {
+  margin: 14px 0 0;
+  padding: 16px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.jt-admin-moderation-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.jt-admin-moderation-actions .jt-admin-action {
+  min-height: 46px;
+}
+
+.jt-admin-modal-note {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+  .jt-admin-report-top {
+    flex-direction: column;
+  }
+
+  .jt-admin-report-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .jt-admin-report-header {
+    gap: 18px;
+  }
+
+  .jt-admin-report-filters {
+    width: 100%;
+  }
+
+  .jt-admin-report-filters button {
+    flex: 1;
+  }
+
+  .jt-admin-modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .jt-admin-modal {
+    max-height: 94vh;
+    border-radius: 26px 26px 0 0;
+    padding: 24px 18px;
+  }
+
+  .jt-admin-moderation-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .jt-admin-review-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,691 @@
+
+/* =========================================================
+   JUST TALK — HOME
+   ========================================================= */
+
+.jt-home {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("/images/just-talk-home.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.jt-home-header {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 24px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.jt-home-brand {
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  text-shadow:
+    0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.jt-home-brand span {
+  opacity: 0.72;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.jt-home-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================================================
+   COMMUNITY BUTTON
+   ========================================================= */
+
+.jt-home-community-button {
+  height: 40px;
+  padding: 0 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jt-home-community-button:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border-color:
+    rgba(255, 255, 255, 0.32);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+.jt-home-community-button:active {
+  transform: translateY(0);
+}
+
+.jt-community-button-icon {
+  color: #f5222f;
+
+  font-size: 14px;
+
+  text-shadow:
+    0 0 12px rgba(245, 34, 47, 0.65);
+}
+
+.jt-community-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   PRIVATE BY DESIGN
+   ========================================================= */
+
+.jt-home-header-badge {
+  height: 40px;
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.jt-status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #4caf88;
+
+  box-shadow:
+    0 0 12px rgba(76, 175, 136, 0.85);
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+   ========================================================= */
+
+.jt-home::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(6, 13, 36, 0.68);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM IMAGE OVERLAY
+   ========================================================= */
+
+.jt-home::after {
+  content: "";
+
+  position: absolute;
+  inset: auto 0 0 0;
+
+  height: 40%;
+
+  background: transparent;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.jt-home-hero {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+  padding: 60px 32px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO BADGE
+   ========================================================= */
+
+.jt-home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.jt-home-badge span {
+  color: #f5222f;
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.jt-home-title {
+  max-width: 850px;
+
+  margin: 24px 0 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(48px, 7vw, 82px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3.5px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  text-shadow:
+    0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+.jt-home-title span {
+  display: block;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.jt-home-description {
+  max-width: 570px;
+
+  margin: 26px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   START TALKING
+   ========================================================= */
+
+.jt-home-primary {
+  min-height: 40px;
+
+  margin-top: 30px;
+
+  padding: 0 21px 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  border: 0;
+  border-radius: 16px;
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jt-home-primary:hover {
+  transform: translateY(-3px);
+
+  background: #c40010;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.32);
+}
+
+.jt-home-primary:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.jt-home-arrow {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background:
+    rgba(230, 0, 18, 0.10);
+
+  color: #e60012;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   PRIVACY MESSAGE
+   ========================================================= */
+
+.jt-home-privacy {
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.64);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.jt-home-features {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0 32px 28px;
+
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.jt-home-feature {
+  flex: 1;
+
+  max-width: 260px;
+
+  padding: 16px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.jt-feature-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(230, 0, 18, 0.15);
+
+  color: #f5222f;
+
+  font-size: 13px;
+}
+
+.jt-home-feature strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.jt-home-feature p {
+  margin: 5px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.jt-home-footer {
+  position: relative;
+  z-index: 2;
+
+  padding: 0 32px 20px;
+
+  text-align: center;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE BACKGROUND
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .jt-home {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 701px) {
+  .jt-home {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .jt-home-header {
+    padding: 18px;
+  }
+
+  .jt-home-brand {
+    font-size: 18px;
+  }
+
+  .jt-home-header-actions {
+    gap: 6px;
+  }
+
+  .jt-home-header-badge {
+    display: none;
+  }
+
+  .jt-home-community-button {
+    height: 36px;
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
+  .jt-home-hero {
+    padding: 50px 20px 55px;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  .jt-home-title {
+    width: 100%;
+
+    font-size:
+      clamp(42px, 13vw, 62px);
+
+    letter-spacing: -2.5px;
+
+    text-align: center;
+  }
+
+  .jt-home-description {
+    max-width: 430px;
+
+    font-size: 14px;
+
+    text-align: center;
+  }
+
+  .jt-home-primary {
+    width: 100%;
+    max-width: 360px;
+    align-self: center;
+  }
+
+  .jt-home-privacy {
+    text-align: center;
+  }
+
+  .jt-home-features {
+    flex-direction: column;
+
+    padding:
+      0 18px 20px;
+  }
+
+  .jt-home-feature {
+    width: 100%;
+    max-width: none;
+  }
+
+  .jt-home-footer {
+    padding:
+      0 18px 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .jt-home-community-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  .jt-community-label {
+    display: none;
+  }
+
+  .jt-community-icon {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .jt-home-hero {
+    padding:
+      40px 18px 45px;
+  }
+
+  .jt-home-title {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .jt-home-description {
+    font-size: 13px;
+  }
+
+  .jt-home-feature {
+    padding: 13px;
+  }
+}
+
+.jt-lock {
+  font-size: 13px;
+  line-height: 1;
+}

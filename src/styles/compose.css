@@ -1,0 +1,702 @@
+
+/* =========================================================
+   JUST TALK — COMPOSE PAGE
+   ORIGINAL LIGHT / CHARCOAL / CORAL THEME
+   ========================================================= */
+
+.compose-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    var(--jt-bg);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+   ========================================================= */
+
+.page-glow {
+  position: fixed;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  opacity: 0.2;
+}
+
+.page-glow-one {
+  top: -180px;
+  left: -120px;
+
+  background: var(--jt-primary);
+}
+
+.page-glow-two {
+  right: -160px;
+  bottom: -150px;
+
+  background: var(--jt-primary-light);
+}
+
+
+/* =========================================================
+   FLOW CONTENT
+   ========================================================= */
+
+.compose-page .flow-header,
+.compose-page .flow-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  box-shadow:
+    0 8px 20px rgba(230, 0, 18, 0.2);
+}
+
+.brand {
+  color: var(--jt-text);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRIVATE LABEL
+   ========================================================= */
+
+.private-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 13px;
+
+  border: 1px solid var(--jt-border);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  color: var(--jt-text-secondary);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 16px rgba(15, 31, 77, 0.04);
+
+  backdrop-filter: blur(12px);
+}
+
+.private-icon {
+  color: var(--jt-primary);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   COMPOSE CONTAINER
+   ========================================================= */
+
+.compose-container {
+  max-width: 720px;
+
+  padding-top: 42px;
+  padding-bottom: 70px;
+}
+
+.compose-intro {
+  margin-bottom: 30px;
+}
+
+.compose-intro h1 {
+  margin: 12px 0 12px;
+
+  max-width: 600px;
+
+  color: var(--jt-text);
+
+  font-size: clamp(38px, 6vw, 58px);
+
+  line-height: 1.04;
+
+  letter-spacing: -2.5px;
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.gradient-text {
+  background: var(--jt-primary);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   STEP PROGRESS
+   ========================================================= */
+
+.step-progress {
+  display: flex;
+
+  align-items: center;
+
+  width: 180px;
+
+  margin: 18px 0 22px;
+}
+
+.step-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--jt-border);
+
+  transition: 0.25s ease;
+}
+
+.step-dot.active {
+  width: 11px;
+  height: 11px;
+
+  background: var(--jt-primary);
+
+  box-shadow:
+    0 0 0 4px rgba(230, 0, 18, 0.09);
+}
+
+.step-line {
+  height: 2px;
+
+  flex: 1;
+
+  margin: 0 7px;
+
+  background: var(--jt-border);
+}
+
+.step-line.active {
+  background: var(--jt-primary);
+}
+
+
+/* =========================================================
+   SELECTED TOPIC
+   ========================================================= */
+
+.selected-topic-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px 17px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--jt-border);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 10px 30px rgba(15, 31, 77, 0.05);
+}
+
+.selected-topic-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(230, 0, 18, 0.11);
+
+  border: 1px solid rgba(230, 0, 18, 0.12);
+
+  color: var(--jt-primary);
+
+  font-size: 20px;
+}
+
+.selected-topic-content {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.selected-topic-label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: var(--jt-text-muted);
+}
+
+.selected-topic {
+  color: var(--jt-text);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.selected-topic-check {
+  margin-left: auto;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(76, 175, 136, 0.1);
+
+  color: var(--jt-success);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   COMPOSE FIELD
+   ========================================================= */
+
+.compose-field {
+  margin-bottom: 18px;
+}
+
+.compose-field-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  padding: 0 3px;
+}
+
+.compose-field-header label {
+  color: var(--jt-text);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.compose-hint {
+  color: var(--jt-text-muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   COMPOSE BOX
+   ========================================================= */
+
+.compose-box {
+  position: relative;
+
+  border: 1px solid var(--jt-border);
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 12px 35px rgba(15, 31, 77, 0.055);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  overflow: hidden;
+}
+
+.compose-box:focus-within,
+.compose-box-active {
+  border-color: rgba(230, 0, 18, 0.5);
+
+  box-shadow:
+    0 14px 40px rgba(15, 31, 77, 0.07),
+    0 0 0 4px rgba(230, 0, 18, 0.055);
+}
+
+.compose-box textarea {
+  display: block;
+
+  width: 100%;
+
+  min-height: 230px;
+
+  padding: 22px 22px 45px;
+
+  border: none;
+
+  outline: none;
+
+  resize: vertical;
+
+  background: transparent;
+
+  color: var(--jt-text);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.compose-box textarea::placeholder {
+  color: var(--jt-text-muted);
+}
+
+
+/* =========================================================
+   CHARACTER COUNT
+   ========================================================= */
+
+.character-count {
+  position: absolute;
+
+  right: 18px;
+  bottom: 14px;
+
+  color: var(--jt-text-muted);
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.character-count-warning {
+  color: var(--jt-warning);
+}
+
+
+/* =========================================================
+   PRIVACY WARNING
+   ========================================================= */
+
+.privacy-warning {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin: 18px 0;
+
+  padding: 15px 16px;
+
+  border: 1px solid rgba(230, 0, 18, 0.14);
+
+  border-radius: 16px;
+
+  background: rgba(230, 0, 18, 0.045);
+}
+
+.privacy-warning-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(230, 0, 18, 0.11);
+
+  color: var(--jt-primary);
+
+  font-size: 14px;
+}
+
+.privacy-warning strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--jt-text);
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.privacy-warning p {
+  margin: 0;
+
+  color: var(--jt-text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CONTINUE BUTTON
+   ========================================================= */
+
+.compose-continue {
+  width: 100%;
+
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 17px;
+
+  background: var(--jt-primary);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 25px rgba(230, 0, 18, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.compose-continue:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px rgba(230, 0, 18, 0.24);
+}
+
+.compose-continue:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.compose-continue:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.42;
+
+  box-shadow: none;
+}
+
+.button-arrow {
+  font-size: 18px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.compose-continue:hover:not(:disabled) .button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   FOOTER NOTE
+   ========================================================= */
+
+.compose-footer-note {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: var(--jt-text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .compose-container {
+    padding-top: 28px;
+    padding-bottom: 45px;
+  }
+
+  .compose-intro h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .flow-description {
+    font-size: 14px;
+  }
+
+  .selected-topic-card {
+    padding: 13px;
+
+    border-radius: 16px;
+  }
+
+  .selected-topic-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .compose-box {
+    border-radius: 18px;
+  }
+
+  .compose-box textarea {
+    min-height: 210px;
+
+    padding:
+      18px 17px 43px;
+  }
+
+  .privacy-warning {
+    padding: 13px;
+  }
+
+  .compose-continue {
+    min-height: 55px;
+  }
+
+  .private-label {
+    padding: 7px 10px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .flow-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .private-label {
+    font-size: 10px;
+  }
+
+  .compose-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .compose-intro h1 {
+    font-size: 35px;
+  }
+}
