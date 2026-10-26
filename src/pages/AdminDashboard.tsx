@@ -565,7 +565,7 @@ function AdminDashboard({
                 );
               }}
             >
-              <span>✦</span>
+              <span>⌂</span>
               Professionals
 
               {dashboard &&

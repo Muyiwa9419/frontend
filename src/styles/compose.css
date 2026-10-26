@@ -1,7 +1,7 @@
-
 /* =========================================================
    JUST TALK — COMPOSE PAGE
-   ORIGINAL LIGHT / CHARCOAL / CORAL THEME
+   BRAND RED / NAVY / WHITE THEME (flat, no gradients)
+   Minimum text size 11px.
    ========================================================= */
 
 .compose-page {
@@ -9,44 +9,14 @@
   min-height: 100vh;
   overflow: hidden;
 
-  background:
-    var(--jt-bg);
+  background: var(--jt-bg);
 }
 
 
-/* =========================================================
-   BACKGROUND GLOWS
-   ========================================================= */
+/* Decorative background glows removed for the flat design */
 
 .page-glow {
-  position: fixed;
-
-  width: 320px;
-  height: 320px;
-
-  border-radius: 50%;
-
-  filter: blur(90px);
-
-  pointer-events: none;
-
-  z-index: 0;
-
-  opacity: 0.2;
-}
-
-.page-glow-one {
-  top: -180px;
-  left: -120px;
-
-  background: var(--jt-primary);
-}
-
-.page-glow-two {
-  right: -160px;
-  bottom: -150px;
-
-  background: var(--jt-primary-light);
+  display: none;
 }
 
 
@@ -81,21 +51,18 @@
   align-items: center;
   justify-content: center;
 
-  background: var(--jt-primary);
+  background: var(--jt-navy);
 
   color: #ffffff;
 
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
 
   letter-spacing: -0.5px;
-
-  box-shadow:
-    0 8px 20px rgba(230, 0, 18, 0.2);
 }
 
 .brand {
-  color: var(--jt-text);
+  color: var(--jt-navy-dark);
 
   font-weight: 700;
 }
@@ -112,30 +79,25 @@
 
   gap: 6px;
 
-  padding: 8px 13px;
+  padding: 8px 14px;
 
   border: 1px solid var(--jt-border);
 
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.84);
+  background: var(--jt-surface);
 
   color: var(--jt-text-secondary);
 
-  font-size: 12px;
+  font-size: 13px;
 
-  font-weight: 700;
-
-  box-shadow:
-    0 5px 16px rgba(15, 31, 77, 0.04);
-
-  backdrop-filter: blur(12px);
+  font-weight: 600;
 }
 
 .private-icon {
-  color: var(--jt-primary);
+  color: var(--jt-navy);
 
-  font-size: 11px;
+  font-size: 12px;
 }
 
 
@@ -159,27 +121,28 @@
 
   max-width: 600px;
 
-  color: var(--jt-text);
+  color: var(--jt-navy);
 
-  font-size: clamp(38px, 6vw, 58px);
+  font-size: clamp(36px, 6vw, 54px);
 
-  line-height: 1.04;
+  line-height: 1.06;
 
-  letter-spacing: -2.5px;
+  letter-spacing: -2px;
+
+  font-weight: 700;
 }
 
 
 /* =========================================================
-   GRADIENT TEXT
+   HIGHLIGHT WORD (solid red, no gradient)
    ========================================================= */
 
 .gradient-text {
-  background: var(--jt-primary);
+  color: var(--jt-primary);
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: none;
 
-  color: transparent;
+  -webkit-text-fill-color: currentColor;
 }
 
 
@@ -198,8 +161,8 @@
 }
 
 .step-dot {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
 
   flex-shrink: 0;
 
@@ -211,13 +174,12 @@
 }
 
 .step-dot.active {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
 
-  background: var(--jt-primary);
+  background: var(--jt-navy);
 
-  box-shadow:
-    0 0 0 4px rgba(230, 0, 18, 0.09);
+  box-shadow: 0 0 0 4px var(--jt-navy-soft);
 }
 
 .step-line {
@@ -231,7 +193,7 @@
 }
 
 .step-line.active {
-  background: var(--jt-primary);
+  background: var(--jt-navy);
 }
 
 
@@ -252,17 +214,16 @@
 
   border: 1px solid var(--jt-border);
 
-  border-radius: 18px;
+  border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.97);
+  background: var(--jt-surface);
 
-  box-shadow:
-    0 10px 30px rgba(15, 31, 77, 0.05);
+  box-shadow: var(--jt-shadow);
 }
 
 .selected-topic-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 
   flex-shrink: 0;
 
@@ -274,11 +235,9 @@
 
   border-radius: 13px;
 
-  background: rgba(230, 0, 18, 0.11);
+  background: var(--jt-navy-soft);
 
-  border: 1px solid rgba(230, 0, 18, 0.12);
-
-  color: var(--jt-primary);
+  color: var(--jt-navy);
 
   font-size: 20px;
 }
@@ -294,7 +253,7 @@
 }
 
 .selected-topic-label {
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -304,9 +263,9 @@
 }
 
 .selected-topic {
-  color: var(--jt-text);
+  color: var(--jt-navy-dark);
 
-  font-size: 14px;
+  font-size: 16px;
 
   font-weight: 700;
 }
@@ -314,8 +273,8 @@
 .selected-topic-check {
   margin-left: auto;
 
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
 
   display: flex;
 
@@ -325,7 +284,7 @@
 
   border-radius: 50%;
 
-  background: rgba(76, 175, 136, 0.1);
+  background: var(--jt-success-soft);
 
   color: var(--jt-success);
 
@@ -356,17 +315,17 @@
 }
 
 .compose-field-header label {
-  color: var(--jt-text);
+  color: var(--jt-navy);
 
-  font-size: 14px;
+  font-size: 15px;
 
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .compose-hint {
   color: var(--jt-text-muted);
 
-  font-size: 12px;
+  font-size: 13px;
 }
 
 
@@ -379,28 +338,24 @@
 
   border: 1px solid var(--jt-border);
 
-  border-radius: 22px;
+  border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--jt-surface);
 
-  box-shadow:
-    0 12px 35px rgba(15, 31, 77, 0.055);
+  box-shadow: var(--jt-shadow);
 
   transition:
     border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    box-shadow 0.2s ease;
 
   overflow: hidden;
 }
 
 .compose-box:focus-within,
 .compose-box-active {
-  border-color: rgba(230, 0, 18, 0.5);
+  border-color: var(--jt-navy);
 
-  box-shadow:
-    0 14px 40px rgba(15, 31, 77, 0.07),
-    0 0 0 4px rgba(230, 0, 18, 0.055);
+  box-shadow: 0 0 0 4px var(--jt-navy-soft);
 }
 
 .compose-box textarea {
@@ -424,7 +379,7 @@
 
   font-family: inherit;
 
-  font-size: 15px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -446,7 +401,7 @@
 
   color: var(--jt-text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 600;
 }
@@ -457,7 +412,7 @@
 
 
 /* =========================================================
-   PRIVACY WARNING
+   PRIVACY WARNING (calm navy note, not an alert)
    ========================================================= */
 
 .privacy-warning {
@@ -471,16 +426,16 @@
 
   padding: 15px 16px;
 
-  border: 1px solid rgba(230, 0, 18, 0.14);
+  border: 1px solid var(--jt-border);
 
-  border-radius: 16px;
+  border-radius: 14px;
 
-  background: rgba(230, 0, 18, 0.045);
+  background: var(--jt-navy-soft);
 }
 
 .privacy-warning-icon {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
 
   flex-shrink: 0;
 
@@ -492,11 +447,11 @@
 
   border-radius: 10px;
 
-  background: rgba(230, 0, 18, 0.11);
+  background: var(--jt-surface);
 
-  color: var(--jt-primary);
+  color: var(--jt-navy);
 
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .privacy-warning strong {
@@ -504,9 +459,9 @@
 
   margin-bottom: 3px;
 
-  color: var(--jt-text);
+  color: var(--jt-navy-dark);
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: 700;
 }
@@ -516,20 +471,20 @@
 
   color: var(--jt-text-secondary);
 
-  font-size: 11px;
+  font-size: 13px;
 
   line-height: 1.55;
 }
 
 
 /* =========================================================
-   CONTINUE BUTTON
+   CONTINUE BUTTON (red pill, the main action)
    ========================================================= */
 
 .compose-continue {
   width: 100%;
 
-  min-height: 58px;
+  min-height: 56px;
 
   display: flex;
 
@@ -541,23 +496,25 @@
 
   border: none;
 
-  border-radius: 17px;
+  border-radius: 999px;
 
   background: var(--jt-primary);
 
   color: #ffffff;
 
-  font-size: 14px;
+  font-family: inherit;
 
-  font-weight: 700;
+  font-size: 15px;
 
-  box-shadow:
-    0 12px 25px rgba(230, 0, 18, 0.18);
+  font-weight: 600;
+
+  box-shadow: 0 10px 22px rgba(230, 0, 18, 0.18);
 
   cursor: pointer;
 
   transition:
     transform 0.2s ease,
+    background 0.2s ease,
     box-shadow 0.2s ease,
     opacity 0.2s ease;
 }
@@ -565,8 +522,9 @@
 .compose-continue:hover:not(:disabled) {
   transform: translateY(-2px);
 
-  box-shadow:
-    0 16px 30px rgba(230, 0, 18, 0.24);
+  background: var(--jt-primary-dark);
+
+  box-shadow: 0 14px 28px rgba(230, 0, 18, 0.24);
 }
 
 .compose-continue:active:not(:disabled) {
@@ -584,8 +542,7 @@
 .button-arrow {
   font-size: 18px;
 
-  transition:
-    transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .compose-continue:hover:not(:disabled) .button-arrow {
@@ -604,7 +561,7 @@
 
   color: var(--jt-text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.5;
 }
@@ -622,35 +579,34 @@
   }
 
   .compose-intro h1 {
-    font-size: 40px;
+    font-size: 38px;
 
-    letter-spacing: -1.8px;
+    letter-spacing: -1.6px;
   }
 
   .flow-description {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .selected-topic-card {
     padding: 13px;
 
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
   .selected-topic-icon {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
   }
 
   .compose-box {
-    border-radius: 18px;
+    border-radius: 16px;
   }
 
   .compose-box textarea {
     min-height: 210px;
 
-    padding:
-      18px 17px 43px;
+    padding: 18px 17px 43px;
   }
 
   .privacy-warning {
@@ -658,11 +614,11 @@
   }
 
   .compose-continue {
-    min-height: 55px;
+    min-height: 54px;
   }
 
   .private-label {
-    padding: 7px 10px;
+    padding: 7px 11px;
   }
 
   .brand-mark {
@@ -684,11 +640,11 @@
   }
 
   .brand {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .private-label {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .compose-container {
@@ -697,6 +653,20 @@
   }
 
   .compose-intro h1 {
-    font-size: 35px;
+    font-size: 34px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .compose-box,
+  .compose-continue,
+  .button-arrow,
+  .step-dot {
+    transition: none;
   }
 }

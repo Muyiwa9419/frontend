@@ -179,9 +179,6 @@ function AdminAuth({
         </form>
 
         <div className="jt-auth-security">
-          <span className="jt-security-icon">
-            ✦
-          </span>
 
           <div>
             <strong>

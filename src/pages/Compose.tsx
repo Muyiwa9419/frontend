@@ -94,7 +94,7 @@ function Compose({
         {/* SELECTED TOPIC */}
         <div className="selected-topic-card">
           <div className="selected-topic-icon">
-            ✦
+            ◌
           </div>
 
           <div className="selected-topic-content">

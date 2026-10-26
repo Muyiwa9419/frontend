@@ -458,7 +458,7 @@ function Conversation({
           {messages.length === 0 && (
             <div className="empty-conversation">
               <div className="empty-conversation-icon">
-                ✦
+                ◌
               </div>
 
               <p>

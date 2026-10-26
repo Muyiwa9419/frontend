@@ -298,7 +298,7 @@ function Community({
             }
           >
             <span className="category-icon">
-              ✦
+              ◌
             </span>
 
             <span>
@@ -637,7 +637,7 @@ function getCategoryIcon(
       return '◌';
 
     case 'life-personal-growth':
-      return '✦';
+      return '◌';
 
     case 'family':
       return '⌂';
@@ -652,7 +652,7 @@ function getCategoryIcon(
       return '◐';
 
     case 'general':
-      return '✧';
+      return '◌';
 
     default:
       return '•';

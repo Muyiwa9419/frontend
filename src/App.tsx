@@ -101,11 +101,11 @@ function App() {
     useState('');
 
   const [
-    authIntent,
-    setAuthIntent,
-  ] = useState<
-    'conversation' | 'community'
-  >('conversation');
+  authIntent,
+  setAuthIntent,
+] = useState<
+  'conversation' | 'community' | 'login'
+>('conversation');
 
   /* =======================================================
      URL NAVIGATION
@@ -505,6 +505,26 @@ function App() {
 
     setScreen('community');
   };
+
+  /* =========================================================
+   HOMEPAGE LOGIN — CLIENT
+   ========================================================= */
+
+const handleUserLogin = () => {
+  setError('');
+  setAuthIntent('login');
+  setScreen('auth');
+};
+
+/* =========================================================
+   HOMEPAGE LOGIN — PROFESSIONAL
+   ========================================================= */
+
+const handleProfessionalLogin = () => {
+  setError('');
+  setAuthIntent('login');
+  setScreen('professional-auth');
+};
 
   /* =======================================================
      COMPOSE
@@ -1046,23 +1066,19 @@ function App() {
       <>
         <Auth
           onBack={() => {
-            setError('');
+  setError('');
 
-            if (
-              authIntent ===
-              'community'
-            ) {
-              setScreen(
-                'home'
-              );
+  if (
+    authIntent === 'community' ||
+    authIntent === 'login'
+  ) {
+    setScreen('home');
+    return;
+  }
 
-              return;
-            }
+  setScreen('identity');
+}}
 
-            setScreen(
-              'identity'
-            );
-          }}
           onAuthenticated={
             handleAuthenticated
           }
@@ -1085,12 +1101,15 @@ function App() {
       <>
         <ProfessionalAuth
           onBack={() => {
-            setError('');
+  setError('');
 
-            setScreen(
-              'start-talking'
-            );
-          }}
+  if (authIntent === 'login') {
+    setScreen('home');
+    return;
+  }
+
+  setScreen('start-talking');
+}}
           onAuthenticated={
             handleAuthenticated
           }
@@ -1329,10 +1348,11 @@ function App() {
   return (
     <>
       <Home
-        onStart={
-          handleStart
-        }
-      />
+  onStart={handleStart}
+  onCommunity={handleOpenCommunity}
+  onUserLogin={handleUserLogin}
+  onProfessionalLogin={handleProfessionalLogin}
+/>
 
       {errorBanner}
     </>

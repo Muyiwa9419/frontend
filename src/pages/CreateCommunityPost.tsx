@@ -192,7 +192,7 @@ function CreateCommunityPost({
           </p>
 
           <div className="privacy-badge">
-            <span>✦</span>
+            <span>◌</span>
 
             <div>
               <strong>
@@ -376,7 +376,7 @@ function getCategoryIcon(
       return '◌';
 
     case 'life-personal-growth':
-      return '✦';
+      return '◌';
 
     case 'family':
       return '⌂';
@@ -391,7 +391,7 @@ function getCategoryIcon(
       return '◐';
 
     case 'general':
-      return '✧';
+      return '◌';
 
     default:
       return '•';

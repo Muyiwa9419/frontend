@@ -1,6 +1,12 @@
+/* =========================================================
+   PROFESSIONAL DASHBOARD
+   Flat design: white cards, navy structure, red only for the
+   main action, green for availability, amber for pending.
+   Minimum text size 11px.
+   ========================================================= */
 
 /* =========================================================
-   PROFESSIONAL WELCOME
+   WELCOME
    ========================================================= */
 
 .professional-welcome {
@@ -12,13 +18,13 @@
 }
 
 /* =========================================================
-   AVAILABILITY CONTROL
+   AVAILABILITY CONTROL (segmented switch)
    ========================================================= */
 
 .availability-control {
   flex-shrink: 0;
-  padding: 13px;
-  border-radius: var(--jt-radius-sm);
+  padding: 14px;
+  border-radius: var(--jt-radius-md);
   background: var(--jt-surface);
   border: 1px solid var(--jt-border);
   box-shadow: var(--jt-shadow);
@@ -27,18 +33,16 @@
 .availability-label {
   display: flex;
   align-items: center;
-  gap: 7px;
-  margin-bottom: 9px;
+  gap: 8px;
+  margin-bottom: 10px;
   color: var(--jt-text-secondary);
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .availability-label-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--jt-success);
   box-shadow: 0 0 0 4px var(--jt-success-soft);
@@ -46,98 +50,95 @@
 
 .availability-buttons {
   display: flex;
-  gap: 5px;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--jt-surface-soft);
 }
 
 .availability-button {
-  border: 1px solid var(--jt-border);
-  border-radius: var(--jt-radius-xs);
-  padding: 8px 11px;
-  background: var(--jt-surface-soft);
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 8px 14px;
+  background: transparent;
   color: var(--jt-text-secondary);
-  font-size: 9px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
   transition:
     background var(--jt-transition),
     border-color var(--jt-transition),
-    color var(--jt-transition),
-    transform var(--jt-transition);
+    color var(--jt-transition);
 }
 
 .availability-button:hover {
-  border-color: var(--jt-primary);
-  color: var(--jt-primary-dark);
-  transform: translateY(-1px);
+  color: var(--jt-navy);
 }
 
 .availability-button.selected {
-  background: var(--jt-success-soft);
-  border-color: rgba(76, 175, 136, 0.25);
+  background: var(--jt-surface);
+  border-color: rgba(76, 175, 136, 0.35);
   color: var(--jt-success);
 }
 
 .availability-button.selected-offline {
-  background: var(--jt-surface-muted);
+  background: var(--jt-surface);
   border-color: var(--jt-border);
   color: var(--jt-text);
 }
 
 /* =========================================================
-   VERIFICATION
+   VERIFICATION (slim row, amber = pending)
    ========================================================= */
 
 .verification-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 25px;
-  padding: 17px;
+  margin-bottom: 22px;
+  padding: 14px 16px;
   border-radius: var(--jt-radius-md);
-
-  background: var(--jt-primary-soft);
-
-  border: 1px solid rgba(230, 0, 18, 0.14);
+  background: var(--jt-surface);
+  border: 1px solid var(--jt-border);
   box-shadow: var(--jt-shadow);
 }
 
 .verification-icon {
-  width: 43px;
-  height: 43px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: var(--jt-radius-sm);
-
-  background: var(--jt-primary);
-
-  color: #ffffff;
-  font-weight: 800;
-
-  box-shadow:
-    0 8px 20px rgba(230, 0, 18, 0.18);
+  border-radius: 11px;
+  background: var(--jt-navy-soft);
+  color: var(--jt-navy);
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .verification-content {
   flex: 1;
+  min-width: 0;
 }
 
 .verification-content p {
-  margin: 0 0 4px;
+  margin: 0 0 3px;
   color: var(--jt-text-muted);
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .verification-content h2 {
   margin: 0;
-  color: var(--jt-dark);
-  font-size: 14px;
+  color: var(--jt-navy-dark);
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -145,34 +146,33 @@
   display: block;
   margin-top: 4px;
   color: var(--jt-text-secondary);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .verification-status {
-  padding: 6px 9px;
+  padding: 5px 11px;
   border-radius: 999px;
   background: var(--jt-warning-soft);
   color: var(--jt-warning);
-  font-size: 8px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 /* =========================================================
-   PROFESSIONAL STATS
+   STATS
    ========================================================= */
 
 .professional-stats {
   display: grid;
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-  gap: 11px;
-  margin-bottom: 42px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
 }
 
 .professional-stat-card {
-  min-height: 110px;
+  min-height: 108px;
   padding: 16px;
 
   display: flex;
@@ -180,7 +180,6 @@
   justify-content: space-between;
 
   border-radius: var(--jt-radius-md);
-
   background: var(--jt-surface);
   border: 1px solid var(--jt-border);
   box-shadow: var(--jt-shadow);
@@ -194,7 +193,7 @@
 .professional-stat-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--jt-shadow-lg);
-  border-color: rgba(230, 0, 18, 0.18);
+  border-color: var(--jt-navy);
 }
 
 .professional-stat-card.featured {
@@ -203,13 +202,12 @@
   gap: 12px;
 
   background: var(--jt-success-soft);
-
-  border-color: rgba(76, 175, 136, 0.15);
+  border-color: rgba(76, 175, 136, 0.25);
 }
 
 .stat-card-icon {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
 
   display: flex;
   align-items: center;
@@ -218,50 +216,45 @@
   flex-shrink: 0;
 
   border-radius: 11px;
-  background: var(--jt-success-soft);
+  background: var(--jt-surface);
   color: var(--jt-success);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .professional-stat-card span {
-  color: var(--jt-text-muted);
-  font-size: 9px;
-  font-weight: 700;
+  color: var(--jt-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .professional-stat-card.featured span {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .professional-stat-card strong {
-  color: var(--jt-dark);
-  font-size: 15px;
+  color: var(--jt-navy-dark);
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .stat-number {
-  color: var(--jt-dark);
-  font-size: 29px;
+  color: var(--jt-navy);
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: -1px;
 }
 
-/* Replace old purple/pink/blue accents with the Just Talk palette */
+/* One calm color for every number; red is kept for actions */
 
-.stat-number.purple {
-  color: var(--jt-primary);
-}
-
-.stat-number.pink {
-  color: var(--jt-primary-light);
-}
-
+.stat-number.purple,
+.stat-number.pink,
 .stat-number.blue {
-  color: var(--jt-dark-light);
+  color: var(--jt-navy);
 }
 
 /* =========================================================
-   INCOMING REQUEST
+   INCOMING REQUEST (the main thing on this page)
    ========================================================= */
 
 .incoming-request-card {
@@ -274,15 +267,15 @@
   padding: 22px;
   border-radius: var(--jt-radius-lg);
 
-  background: rgba(245, 34, 47, 0.06);
+  background: var(--jt-surface);
 
-  border: 1px solid rgba(230, 0, 18, 0.16);
+  border: 1.5px solid var(--jt-navy);
   box-shadow: var(--jt-shadow);
 }
 
 .request-card-icon {
-  width: 53px;
-  height: 53px;
+  width: 54px;
+  height: 54px;
   flex-shrink: 0;
 
   display: flex;
@@ -291,39 +284,37 @@
 
   border-radius: 16px;
 
-  background: var(--jt-primary);
+  background: var(--jt-navy);
 
   color: #ffffff;
   font-size: 24px;
-
-  box-shadow:
-    0 10px 25px rgba(230, 0, 18, 0.18);
 }
 
 .request-card-content {
   flex: 1;
+  min-width: 0;
 }
 
 .request-card-content p,
 .professional-active-content span {
   margin: 0 0 6px;
-  color: var(--jt-text-muted);
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 1.6px;
+  color: var(--jt-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
 .request-card-content h3 {
-  margin: 0 0 7px;
-  color: var(--jt-dark);
-  font-size: 17px;
+  margin: 0 0 6px;
+  color: var(--jt-navy-dark);
+  font-size: 18px;
   font-weight: 700;
 }
 
 .request-card-content > span {
   color: var(--jt-text-secondary);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .request-card-content strong {
@@ -332,38 +323,41 @@
 
 .request-actions {
   display: flex;
-  gap: 7px;
+  gap: 8px;
 }
 
 .accept-button,
 .decline-button {
-  padding: 10px 14px;
-  border-radius: var(--jt-radius-xs);
-  font-size: 10px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   transition:
     transform var(--jt-transition),
     box-shadow var(--jt-transition),
-    background var(--jt-transition);
+    background var(--jt-transition),
+    border-color var(--jt-transition);
 }
 
 .accept-button {
-  border: none;
+  border: 1px solid var(--jt-primary);
 
   background: var(--jt-primary);
 
   color: #ffffff;
 
-  box-shadow:
-    0 8px 20px rgba(230, 0, 18, 0.18);
+  box-shadow: 0 8px 20px rgba(230, 0, 18, 0.18);
 }
 
 .accept-button:hover {
   transform: translateY(-1px);
 
-  box-shadow:
-    0 11px 25px rgba(230, 0, 18, 0.25);
+  background: var(--jt-primary-dark);
+  border-color: var(--jt-primary-dark);
+
+  box-shadow: 0 11px 25px rgba(230, 0, 18, 0.25);
 }
 
 .decline-button {
@@ -374,29 +368,30 @@
 
 .decline-button:hover {
   background: var(--jt-danger-soft);
-  border-color: rgba(217, 83, 91, 0.2);
+  border-color: rgba(217, 83, 91, 0.3);
 }
 
 /* =========================================================
-   PROFESSIONAL EMPTY
+   EMPTY STATE
    ========================================================= */
 
 .professional-empty-card {
-  min-height: 90px;
+  min-height: 96px;
 }
 
 .professional-empty-card h3 {
-  color: var(--jt-dark);
-  font-size: 13px;
+  color: var(--jt-navy-dark);
+  font-size: 15px;
 }
 
 .professional-empty-card p {
   margin-bottom: 0;
   color: var(--jt-text-secondary);
+  font-size: 13px;
 }
 
 /* =========================================================
-   ACTIVE PROFESSIONAL
+   ACTIVE CONVERSATION
    ========================================================= */
 
 .professional-active-card {
@@ -404,7 +399,7 @@
   align-items: center;
   gap: 14px;
 
-  padding: 19px;
+  padding: 18px;
   border-radius: var(--jt-radius-md);
 
   background: var(--jt-surface);
@@ -413,8 +408,8 @@
 }
 
 .professional-active-icon {
-  width: 47px;
-  height: 47px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
 
   display: flex;
@@ -431,19 +426,20 @@
 
 .professional-active-content {
   flex: 1;
+  min-width: 0;
 }
 
 .professional-active-content h3 {
   margin: 0;
-  color: var(--jt-dark);
-  font-size: 14px;
+  color: var(--jt-navy-dark);
+  font-size: 15px;
   font-weight: 700;
 }
 
 .professional-active-content p {
   margin: 5px 0 0;
   color: var(--jt-text-secondary);
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -472,14 +468,14 @@
 
 .dashboard-error-page h1 {
   margin: 0;
-  color: var(--jt-dark);
+  color: var(--jt-navy);
   font-size: 28px;
   letter-spacing: -1px;
 }
 
 .dashboard-error-page > p {
   color: var(--jt-text-secondary);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -489,17 +485,12 @@
 
 @media (max-width: 900px) {
   .professional-stats {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .incoming-request-card {
     align-items: flex-start;
     flex-wrap: wrap;
-  }
-
-  .request-card-content {
-    min-width: 0;
   }
 
   .request-actions {
@@ -527,27 +518,18 @@
     width: 100%;
   }
 
-  .availability-button {
-    flex: 1;
-  }
-
   .verification-card {
     align-items: flex-start;
     flex-wrap: wrap;
   }
 
-  .verification-content {
-    min-width: 0;
-  }
-
   .verification-status {
-    margin-left: 57px;
+    margin-left: 54px;
   }
 
   .professional-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 9px;
-    margin-bottom: 30px;
+    gap: 10px;
+    margin-bottom: 28px;
   }
 
   .professional-stat-card {
@@ -556,23 +538,23 @@
   }
 
   .stat-number {
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .incoming-request-card {
-    padding: 17px;
-    gap: 13px;
+    padding: 18px;
+    gap: 14px;
   }
 
   .request-card-icon {
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
     border-radius: 13px;
-    font-size: 19px;
+    font-size: 20px;
   }
 
   .request-card-content h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .professional-active-card {
