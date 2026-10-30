@@ -578,6 +578,108 @@
 }
 
 
+.jt-home-login-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.jt-login-chevron {
+  margin-left: 3px;
+  font-size: 9px;
+  opacity: 0.75;
+}
+
+.jt-home-login-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 1000;
+  width: 265px;
+  padding: 8px;
+  background: var(--jt-surface, #ffffff);
+  border: 1px solid var(--jt-border, #e8e5e1);
+  border-radius: 16px;
+  box-shadow: var(--jt-shadow-lg, 0 20px 60px rgba(29, 31, 40, 0.12));
+  animation: jt-login-menu-enter 0.18s ease-out;
+}
+
+.jt-home-login-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 11px;
+  border: none;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--jt-text, #1f1f24);
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.jt-home-login-option:hover,
+.jt-home-login-option:focus-visible {
+  background: var(--jt-primary-soft, rgba(255, 90, 95, 0.09));
+  outline: none;
+}
+
+.jt-login-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--jt-primary-soft, rgba(255, 90, 95, 0.09));
+  font-size: 19px;
+}
+
+.jt-login-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.jt-login-option-text strong {
+  color: var(--jt-dark, #1d1f28);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.jt-login-option-text small {
+  color: var(--jt-text-secondary, #6f7078);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+@keyframes jt-login-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .jt-home-login-menu {
+    width: 250px;
+    right: -45px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jt-home-login-menu {
+    animation: none;
+  }
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */

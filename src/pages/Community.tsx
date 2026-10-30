@@ -249,7 +249,7 @@ function Community({
           </p>
 
           <div className="community-privacy-note">
-            <span>✦</span>
+            <span>＋</span>
             Your public identity stays anonymous.
           </div>
 

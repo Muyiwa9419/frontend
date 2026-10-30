@@ -1,14 +1,20 @@
+import { useState } from 'react';
+
 interface HomeProps {
   onStart: () => void;
   onCommunity: () => void;
-  onLogin: () => void;
+  onUserLogin: () => void;
+  onProfessionalLogin: () => void;
 }
 
 function Home({
   onStart,
   onCommunity,
-  onLogin,
+  onUserLogin,
+  onProfessionalLogin,
 }: HomeProps) {
+  const [showLoginMenu, setShowLoginMenu] = useState(false);
+
   return (
     <main
       className="jt-home"
@@ -23,19 +29,61 @@ function Home({
         </div>
 
         <div className="jt-home-header-actions">
-          {/* Login button for returning clients */}
-          <button
-            type="button"
-            className="jt-home-login-button"
-            onClick={onLogin}
-            aria-label="Login to your account"
-            title="Login"
-          >
-            <span className="jt-login-icon">↪</span>
-            <span>Login</span>
-          </button>
+          {/* Login dropdown */}
+          <div className="jt-home-login-wrapper">
+            <button
+              type="button"
+              className="jt-home-login-button"
+              onClick={() => setShowLoginMenu((previous) => !previous)}
+              aria-label="Choose login type"
+              aria-expanded={showLoginMenu}
+              aria-haspopup="menu"
+            >
+              <span className="jt-login-icon">↪</span>
+              <span>Login</span>
+              <span className="jt-login-chevron">
+                {showLoginMenu ? '▲' : '▼'}
+              </span>
+            </button>
 
-          {/* Community button */}
+            {showLoginMenu && (
+              <div className="jt-home-login-menu" role="menu">
+                <button
+                  type="button"
+                  className="jt-home-login-option"
+                  role="menuitem"
+                  onClick={() => {
+                    setShowLoginMenu(false);
+                    onUserLogin();
+                  }}
+                >
+                  <span className="jt-login-option-icon">👤</span>
+                  <span className="jt-login-option-text">
+                    <strong>Client Login</strong>
+                    <small>Return to your account</small>
+                  </span>
+                </button>
+
+                {/* <button
+                  type="button"
+                  className="jt-home-login-option"
+                  role="menuitem"
+                  onClick={() => {
+                    setShowLoginMenu(false);
+                    onProfessionalLogin();
+                  }}
+                >
+                  <span className="jt-login-option-icon">✚</span>
+                  <span className="jt-login-option-text">
+                    <strong>Professional Login</strong>
+                    <small>Access your professional dashboard</small>
+                  </span>
+                </button> */}
+              </div>
+            )}
+          </div>
+
+          {/* Community */}
           <button
             type="button"
             className="jt-home-community-button"
@@ -44,9 +92,7 @@ function Home({
             title="Community"
           >
             <span className="jt-community-icon">💬</span>
-            <span className="jt-community-label">
-              Community
-            </span>
+            <span className="jt-community-label">Community</span>
           </button>
         </div>
       </header>
@@ -68,7 +114,6 @@ function Home({
           pressure, or the fear of being misunderstood.
         </p>
 
-        {/* Start talking */}
         <button
           type="button"
           className="jt-home-primary"
@@ -80,9 +125,7 @@ function Home({
 
         <div className="jt-home-privacy">
           <span className="jt-lock">🔒</span>
-          <span>
-            Your conversation starts anonymously.
-          </span>
+          <span>Your conversation starts anonymously.</span>
         </div>
       </section>
 
@@ -92,9 +135,7 @@ function Home({
           <div className="jt-feature-icon">○</div>
           <div>
             <strong>Private</strong>
-            <p>
-              Share only what you're comfortable sharing.
-            </p>
+            <p>Share only what you're comfortable sharing.</p>
           </div>
         </div>
 
@@ -102,9 +143,7 @@ function Home({
           <div className="jt-feature-icon">○</div>
           <div>
             <strong>Judgment-free</strong>
-            <p>
-              A space where you can simply be heard.
-            </p>
+            <p>A space where you can simply be heard.</p>
           </div>
         </div>
 
@@ -112,9 +151,7 @@ function Home({
           <div className="jt-feature-icon">○</div>
           <div>
             <strong>Human connection</strong>
-            <p>
-              Connect with someone when you need it.
-            </p>
+            <p>Connect with someone when you need it.</p>
           </div>
         </div>
       </section>
