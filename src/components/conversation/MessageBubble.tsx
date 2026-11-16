@@ -1,5 +1,5 @@
-import { Message } from '../../types';
-
+// import { Message } from '../../types';
+import type { Message } from '../../types';
 interface MessageBubbleProps {
   message: Message;
   anonymousName: string;

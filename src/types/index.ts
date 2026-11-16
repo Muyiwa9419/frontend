@@ -1,3 +1,4 @@
+
 export type Screen =
   | 'home'
   | 'start-talking'
@@ -5,6 +6,7 @@ export type Screen =
   | 'compose'
   | 'identity'
   | 'auth'
+  | 'professional-auth'
   | 'conversation'
   | 'dashboard'
   | 'professional-dashboard'
@@ -23,4 +25,10 @@ export interface Message {
   sender: MessageSender;
   text: string;
   timestamp?: string;
+}
+
+export interface Topic {
+  icon: string;
+  title: string;
+  description: string;
 }

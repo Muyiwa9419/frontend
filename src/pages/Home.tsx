@@ -64,7 +64,8 @@ function Home({
                   </span>
                 </button>
 
-                {/* <button
+                
+                <button
                   type="button"
                   className="jt-home-login-option"
                   role="menuitem"
@@ -78,7 +79,8 @@ function Home({
                     <strong>Professional Login</strong>
                     <small>Access your professional dashboard</small>
                   </span>
-                </button> */}
+                </button>
+
               </div>
             )}
           </div>

@@ -176,6 +176,7 @@ function ProfessionalAuth({
     onAuthenticated();
   };
 
+ 
   const handleLogin = async () => {
     /*
     |--------------------------------------------------------------------------
@@ -183,16 +184,14 @@ function ProfessionalAuth({
     |--------------------------------------------------------------------------
     */
 
-    const result =
-      await auth.professionalLogin(
-        form.email.trim().toLowerCase(),
-        form.password
-      );
+    const result = await auth.professionalLogin(
+      form.email.trim().toLowerCase(),
+      form.password
+    );
 
     if (!result.success) {
       throw new Error(
-        result.message ||
-          'Unable to sign you in.'
+        result.message || 'Unable to sign you in.'
       );
     }
 
@@ -202,8 +201,9 @@ function ProfessionalAuth({
     |--------------------------------------------------------------------------
     */
 
-    onContinue();
+    onAuthenticated();
   };
+
 
   const handleSubmit = async (
     event: React.FormEvent

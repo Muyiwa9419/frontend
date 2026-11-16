@@ -1,3 +1,4 @@
+
 const HowItWorks = () => {
   const steps = [
     {
@@ -8,7 +9,7 @@ const HowItWorks = () => {
     {
       number: '02',
       title: 'Say what you mean',
-      text: 'Write freely. You don't have to make everything sound perfect.',
+      text: "Write freely. You don't have to make everything sound perfect.",
     },
     {
       number: '03',

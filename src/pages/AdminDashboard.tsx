@@ -1362,19 +1362,20 @@ function AdminDashboard({
               </div>
             ) : (
               <div className="jt-admin-report-list">
-                {reports.map(
-                  (report) => {
-                    const target =
-                      report.post ||
-                      report.reply;
+  {reports.map((report) => {
+    return (
+      <article
+        className="jt-admin-report-card"
+        key={report.id}
+      >
 
-                    return (
+                    {/* return (
                       <article
                         className="jt-admin-report-card"
                         key={
                           report.id
                         }
-                      >
+                      > */}
                         <div className="jt-admin-report-top">
                           <div>
                             <span className="jt-admin-report-reason">

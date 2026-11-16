@@ -650,22 +650,28 @@ const handleProfessionalLogin = () => {
       }
 
       /* =================================================
-         COMMUNITY
-         ================================================= */
+   COMMUNITY
+   ================================================= */
 
-      if (
-        authIntent === 'community'
-      ) {
-        setScreen('community');
+if (authIntent === 'community') {
+  setScreen('community');
+  return;
+}
 
-        return;
-      }
+/* =================================================
+   CREATE CONVERSATION
+   ================================================= */
 
-      /* =================================================
-         USER DASHBOARD
-         ================================================= */
+if (authIntent === 'conversation') {
+  await handleCreateConversation();
+  return;
+}
 
-      setScreen('dashboard');
+/* =================================================
+   USER DASHBOARD
+   ================================================= */
+
+setScreen('dashboard');
     } catch (error) {
       console.error(
         'Unable to complete authentication:',
@@ -761,15 +767,13 @@ const handleProfessionalLogin = () => {
           true
         );
 
-        const result =
-          await conversations.create({
-            topic: selectedTopic,
-            message,
-          });
+        const result = await conversations.create(
+  selectedTopic,
+  message
+);
 
-        const newConversationId =
-          result?.conversation?.id ||
-          result?.id;
+const newConversationId =
+  result.conversation.id;
 
         if (
           !newConversationId
@@ -788,9 +792,9 @@ const handleProfessionalLogin = () => {
           newConversationId
         );
 
-        setConversationMessages(
-          result.messages || []
-        );
+        setConversationMessages([
+  result.message,
+]);
 
         setScreen(
           'conversation'
@@ -813,26 +817,58 @@ const handleProfessionalLogin = () => {
       }
     };
 
+
+const handleProfessionalOpenConversation = async (
+  id: string
+) => {
+  try {
+    setError('');
+
+    const result = await conversations.get(id);
+
+    setConversationId(id);
+    setConversationMessages(result.messages);
+
+    sessionStorage.setItem(
+      ACTIVE_CONVERSATION_KEY,
+      id
+    );
+
+    setScreen('conversation');
+  } catch (error) {
+    console.error(
+      'Unable to open conversation:',
+      error
+    );
+
+    setError(
+      error instanceof Error
+        ? error.message
+        : 'Unable to open this conversation.'
+    );
+  }
+};
+
+
   /* =======================================================
      CONVERSATION BACK
      ======================================================= */
 
-  const handleConversationBack =
-    () => {
-      setError('');
+  const handleConversationBack = () => {
+  setError('');
 
-      if (
-        isAuthenticated
-      ) {
-        setScreen(
-          'dashboard'
-        );
+  if (isAuthenticated) {
+    setScreen(
+      isProfessional
+        ? 'professional-dashboard'
+        : 'dashboard'
+    );
 
-        return;
-      }
+    return;
+  }
 
-      setScreen('home');
-    };
+  setScreen('home');
+};
 
   /* =======================================================
      ADMIN AUTH
@@ -1055,39 +1091,36 @@ const handleProfessionalLogin = () => {
     );
   }
 
+ 
   /* =======================================================
      NORMAL AUTH
      ======================================================= */
 
-  if (
-    screen === 'auth'
-  ) {
+  if (screen === 'auth') {
     return (
       <>
         <Auth
           onBack={() => {
-  setError('');
+            setError('');
 
-  if (
-    authIntent === 'community' ||
-    authIntent === 'login'
-  ) {
-    setScreen('home');
-    return;
-  }
+            if (
+              authIntent === 'community' ||
+              authIntent === 'login'
+            ) {
+              setScreen('home');
+              return;
+            }
 
-  setScreen('identity');
-}}
-
-          onAuthenticated={
-            handleAuthenticated
-          }
+            setScreen('identity');
+          }}
+          onAuthenticated={handleAuthenticated}
         />
 
         {errorBanner}
       </>
     );
   }
+
 
   /* =======================================================
      PROFESSIONAL AUTH
@@ -1120,19 +1153,18 @@ const handleProfessionalLogin = () => {
     );
   }
 
+ 
   /* =======================================================
      PROFESSIONAL DASHBOARD
      ======================================================= */
 
-  if (
-    screen ===
-    'professional-dashboard'
-  ) {
+  if (screen === 'professional-dashboard') {
     return (
       <>
         <ProfessionalDashboard
-          onLogout={
-            handleLogout
+          onLogout={handleLogout}
+          onOpenConversation={
+            handleProfessionalOpenConversation
           }
         />
 
@@ -1140,6 +1172,7 @@ const handleProfessionalLogin = () => {
       </>
     );
   }
+
 
   /* =======================================================
      CONVERSATION
